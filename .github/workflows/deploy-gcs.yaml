@@ -27,5 +27,5 @@ jobs:
 
     - name: Deploy via GCS
       run: |
-        gsutil -m rm -rf gs://calcium-subject-408416/* || echo "$?"
-        gsutil -m cp -r * gs://calcium-subject-408416/
+        gsutil -m rm -rf gs://gcp-adev-githubactions/* || echo "$?"
+        gsutil -m cp -r * gs://gcp-adev-githubactions/
