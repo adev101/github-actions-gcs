@@ -18,12 +18,12 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v4
 
-    - id: 'auth'
-      uses: 'google-github-actions/auth@v2'
+    # Setup gcloud CLI
+    - uses: google-github-actions/setup-gcloud@v1
       with:
         service_account_email: ${{ secrets.GCA_SA_EMAIL }}
         service_account_key: ${{ secrets.GCA_SA_KEY }}
-        project_id: calcium-subject-408416
+        project_id: calcium-subject-408416	
 
     - name: Deploy via GCS
       run: |
